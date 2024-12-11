@@ -1,0 +1,29 @@
+{
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss"
+  ],
+  "htmlWhitespaceSensitivity": "strict",
+  "overrides": [
+    {
+      "files": "*.{js,jsx,ts,tsx,mjs,cjs}",
+      "options": {
+        "bracketSameLine": false,
+        "singleQuote": true,
+        "jsxSingleQuote": false,
+        "importOrder": [
+          "<THIRD_PARTY_MODULES>",
+          "^@/(assets|data)/?(.*)$",
+          "^@/(model|consts|store|hooks|utils)/?(.*)$",
+          "^@/types/?(.*)$",
+          "^@/styles/?(.*)$",
+          "^@/components/?(.*)$",
+          "^@/(.*)$",
+          "^[./]"
+        ],
+        "importOrderSeparation": true,
+        "importOrderSortSpecifiers": true
+      }
+    }
+  ]
+}
