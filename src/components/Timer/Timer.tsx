@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { ReleaseDate } from '@/consts/dates';
 import { getDaysFromRightNow } from '@/utils/dates';
 
-export default function Timer(): JSX.Element {
+export default function Timer() {
   const getDaysUntilGTA6Release = () => getDaysFromRightNow(ReleaseDate.GTA6);
 
   const [daysUntilGTA6Release, setDaysUntilGTA6Release] = useState(
