@@ -3,6 +3,9 @@ import { useEffect, useState } from 'react';
 import { ReleaseDate } from '@/consts/dates';
 import { getDaysFromRightNow } from '@/utils/dates';
 
+import GTA6LogoImg from '@/components/GTA6LogoImg/GTA6LogoImg';
+import Zoom from '@/components/Zoom/Zoom';
+
 export default function Timer() {
   const getDaysUntilGTA6Release = () => getDaysFromRightNow(ReleaseDate.GTA6);
 
@@ -22,26 +25,25 @@ export default function Timer() {
 
   return (
     <>
-      <div className="flex min-h-full flex-col items-center justify-center bg-gradient-to-tr from-blue-700 from-5% via-pink-500 via-60% to-orange-300 pb-8 font-satisfy text-xl font-bold leading-none text-white sm:text-2xl sm:leading-none">
-        <div className="mb-4 transition-opacity hover:opacity-90 active:opacity-75">
+      <div className="flex min-h-full flex-col items-center justify-center bg-pink-500 bg-gradient-to-tr from-blue-700 from-5% via-pink-500 via-60% to-orange-300 pb-8 font-satisfy text-xl font-bold leading-none text-white sm:text-2xl sm:leading-none">
+        <Zoom
+          className="mb-4 transition-opacity hover:opacity-90 active:opacity-75"
+          order={0}
+        >
           <a
             href="https://www.rockstargames.com/VI"
             target="_blank"
             rel="noreferrer"
           >
             <span className="sr-only">GTA VI</span>
-            <img
-              className="h-[181px] w-[240px] sm:h-[272px] sm:w-[360px]"
-              src="img/logo-gta6.png"
-              alt="GTA 6 logo."
-            />
+            <GTA6LogoImg />
           </a>
-        </div>
-        <div>is at least</div>
-        <div className="font-russo text-[7rem] sm:text-[9rem]">
+        </Zoom>
+        <Zoom order={1}>is at least</Zoom>
+        <Zoom className="font-russo text-[7rem] sm:text-[9rem]" order={2}>
           {daysUntilGTA6Release}
-        </div>
-        <div>days away from release</div>
+        </Zoom>
+        <Zoom order={3}>days away from release</Zoom>
       </div>
     </>
   );
