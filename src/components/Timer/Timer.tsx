@@ -31,7 +31,7 @@ export default function Timer(): JSX.Element {
           >
             <span className="sr-only">GTA VI</span>
             <img
-              className="w-[240px] sm:w-[360px]"
+              className="h-[181px] w-[240px] sm:h-[272px] sm:w-[360px]"
               src="img/logo-gta6.png"
               alt="GTA 6 logo."
             />
