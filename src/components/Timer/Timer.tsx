@@ -35,7 +35,6 @@ export default function Timer() {
             target="_blank"
             rel="noreferrer"
           >
-            <span className="sr-only">GTA VI</span>
             <GTA6LogoImg />
           </a>
         </Zoom>
