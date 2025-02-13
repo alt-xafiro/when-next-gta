@@ -15,8 +15,8 @@ export default function Zoom({
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 1, scale: 1 }}
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
       transition={{
         type: 'spring',
         damping: 10,
